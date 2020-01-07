@@ -1,0 +1,110 @@
+\documentclass[11pt,a4paper]{ltxdoc} 
+\usepackage[spanish,es-noindentfirst,es-tabla]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[margin=2.5cm,left=3.5cm]{geometry}
+
+\usepackage{mathpazo}
+\usepackage{longtable}
+\usepackage{aleph-comandos}
+
+\setlength{\parskip}{0.2\baselineskip}
+\renewcommand{\baselinestretch}{1.1}
+
+\newcommand{\file}[1]{\texttt{#1}}
+\newcommand{\option}[1]{\texttt{#1}}
+\newcommand{\package}[1]{\texttt{#1}}
+\newcommand{\ejemplo}[2]{\fbox{#1}\hspace{1cm}\fbox{$#2$}}
+
+\title{\file{aleph-moodle.sty}}
+\author{Jonathan Ortiz}
+\date{2018-09-13}
+
+\begin{document}
+ 
+\maketitle
+ 
+\begin{abstract}
+    \file{aleph-moodle.sty} es un paquete creado para utilizar los comandos del paquete \file{aleph-comandos.sty} para generar archivos vinculables a moodle mediante el paquete \file{moodle.sty}.
+\end{abstract}
+
+\section{Introducción}
+
+El paquete \file{aleph-moodle.sty} es generado por Jonathan Ortiz y traduce los comandos definidos en \file{aleph-comandos.sty} a su versión del paquete \file{moodle.sty}
+    
+
+\section{Uso}
+
+Para cargar la clase se utiliza: \cs{usepackage}|{aleph-moodle}|.
+
+\DescribeMacro{draft} 
+    Este paquete tiene una única opción |draft|, la cual es pasada al paquete |moodle.sty|. Cuando esta opción es incluida no se genere el archivo |xml| (ver docuemntación del paquete moodle).
+
+
+\section{Comandos}
+
+Los comandos proporcionados por el presente paquete son los mismo que los del paquete |aleph-comando.sty|, únicamente se generan las definiciones necesarias para tener compatibilidad con el paquete |moodle.sty|.
+
+\section{Alcances}
+
+Con este paquete se pueden utilizar todos los comandos propios de \LaTeX y del paquete |aleph-comando.sty| salvo
+
+\begin{itemize}
+    \item \cs{suc}
+    \item \cs{comentario}
+    \item \cs{Mat} siempre tiene cuerpo los reales $\R$.
+\end{itemize}
+
+Además permite utilizar la mayoría de las opciones de la plataforma Moodle: Elección de varias respuestas correctas, presentar retroalimentación en cada pregunta, ingreso de respuestas númericas, utilización de figuras, etc.
+
+
+
+
+\section{Limitaciones}
+
+La conversión del archivo tex en formato moodle no es posible cuando existen tildes, ñ-es, doble backslash |\\|, signo de pregunta invertido |?`| ni llaves. De necesitarse la escritura de estos caracteres se debe escribir
+
+\begin{center}
+    \begin{tabular}{cc}
+    \hline
+        Comando & Acción \\
+    \hline
+        |\'a| & á \\
+       |\'e| & é \\
+       |\'i| & í \\
+       |\'o| & ó \\
+       |\'u| & ú \\
+       |\~n| & \~n \\
+       |\cr| & |\\| \\
+       |\lbrace | $\cdot$ |\rbrace|
+       &$\lbrace \cdot \rbrace$\\
+        |&iquest| & ?`\\
+    \hline
+    \end{tabular}
+\end{center}
+
+Además, como el ambiente |aling*| es matemático en LaTeX al momento de realizar la conversión a Moodle no le reconoce como comando matemático. La forma de evitar esto es utilizar el ambienre |aligned| el cual se comporta de forma equivalente al |align*|, pero este debe ser utilizado dentro de \$'s o corchetes. Esto se debe hacer con cada ambiente que sea estrictamente matemático.
+
+Al reemplazar ?` por |&iquest| se produce un error al compilar en LaTeX, este error no importa pues todo marcha bien al subir el archivo a Moodle.
+
+Para adjuntar figuras, el archivo con la figura debe estar dentro de la misma carpeta que está el archivo principal sino, a pesar de no haber errores en LaTeX, en el moodle no se cargará la figura.
+
+\section{Sugerencias}
+
+La mejor forma de realizar cuestionarios para Moodle mediante la utilización del paquete aleph-moodle es escribir de manera normal todo el cuestionario en modo draft (\cs{usepackage}|[draft]{aleph-moodle}|) y al finalizar su revisión: buscar-reemplazar todos las tildes, eñes, doble backslash y ?' por sus comandos respectivos.
+
+Para adjuntar imágenes, todo funciona muy bien si utilizamos formato .png y dentro de |\includegraphics[]{}| recordando que las únicas opciones habilitadas para este es solo ancho y alto.
+
+Para una explicación completa de las demás opciones que se pueden utilizar con este paquete se puede consultar a \url{https://ctan.org/pkg/moodle}.
+
+
+Cualquier problema, por favor reportarlo a\\
+jonathan.ortiz.c347@gmail.com
+
+\newpage
+\DocInput{aleph-moodle.dtx}
+
+\end{document}
