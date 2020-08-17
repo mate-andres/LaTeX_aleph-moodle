@@ -9,13 +9,13 @@
 %% This is a generated file.
 %% LaTeX class for typesetting books
 %% 
-%% Copyright (C) 2019 by Andres Merino <mat.andresmerino@gmail.com>
+%% Copyright (C) 2020 by Andres Merino <mat.andresmerino@gmail.com>
 %% 
 %% Para un mejor uso y entendimiento de la actual clase,
-%% consultar la documentaci^^c3^^b3n.
+%% consultar la documentación.
 %% 
 \NeedsTeXFormat{LaTeX2e}[2009/09/24]
-\ProvidesPackage{aleph-comandos}[2019/12/17 v1.0]
+\ProvidesPackage{aleph-comandos}[2020/08/14 v1.1]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Paquetes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,9 +26,9 @@
 \RequirePackage{amsmath,amssymb}
 \RequirePackage{xcolor}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% --- Comandos de funci^^c3^^b3n
+%% --- Comandos de función
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Funci^^c3^^b3n completa
+%%  Función completa
 \newcommand{\funcion}[5]{%
     {\setlength{\arraycolsep}{2pt}
     \begin{array}{r@{\,}ccl}
@@ -37,25 +37,25 @@
     \end{array}
     }
 }
-%%  Funci^^c3^^b3n dom-img
+%%  Función dom-img
 \newcommand{\func}[3]{ #1\colon #2 \rightarrow  #3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Conjuntos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  N^^c3^^bameros naturales
+%%  Números naturales
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Nbb}{\mathbb{N}}
-%%  N^^c3^^bameros enteros
+%%  Números enteros
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Zbb}{\mathbb{Z}}
-%%  N^^c3^^bameros racionales
+%%  Números racionales
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Qbb}{\mathbb{Q}}
-%%  N^^c3^^bameros reales
+%%  Números reales
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Rbb}{\mathbb{R}}
 \newcommand{\reales}{\mathbb{R}}
-%%  N^^c3^^bameros complejos
+%%  Números complejos
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Cbb}{\mathbb{C}}
 %%  Campos
@@ -69,7 +69,7 @@
 \newcommand{\M}{\mathcal{M}}
 %%  Matrices 2
 \newcommand{\Mat}[3][\R]{#1^{#2\times #3}}
-%%  N^^c3^^bameros irracionales
+%%  Números irracionales
 \newcommand{\Ibb}{\mathbb{I}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Operadores
@@ -92,15 +92,15 @@
 \DeclareMathOperator{\cof}{cof}
 %%  Espacio generado
 \DeclareMathOperator{\gen}{gen}
-%%  Proyecci^^c3^^b3n
+%%  Proyección
 \DeclareMathOperator{\proy}{proy}
 %%  Componente normal
 \DeclareMathOperator{\norm}{norm}
 %%  Interior de un conjunto
 \DeclareMathOperator{\inte}{int}
-%%  Trigonom^^c3^^a9tricas
+%%  Trigonométricas
 \renewcommand{\sin}{\sen}
-%%  Trigonom^^c3^^a9tricas inversa
+%%  Trigonométricas inversa
 \let\arctan\relax
 \DeclareMathOperator{\arctan}{arc\,tan}
 \DeclareMathOperator{\arccsc}{arc\,csc}
@@ -111,28 +111,28 @@
 %%  Parte real y parte imaginaria
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\re}{Re}
-%%  Gr^^c3^^a1fico de una funci^^c3^^b3n
+%%  Gráfico de una función
 \DeclareMathOperator{\graf}{graf}
 %%  Operador signo
 \DeclareMathOperator{\sgn}{sgn}
 %%  Conjunto de valores admisible
 \DeclareMathOperator{\CVA}{CVA}
-%%  Conjunto soluci^^c3^^b3n
+%%  Conjunto solución
 \DeclareMathOperator{\Sol}{Sol}
 \DeclareMathOperator{\sol}{Sol}
 %%  Operador cis (cos + i sen)
 \DeclareMathOperator{\Cis}{Cis}
 \DeclareMathOperator{\cis}{Cis}
-%%  Di^^c3^^a1metro
+%%  Diámetro
 \DeclareMathOperator{\diam}{diam}
 %%  Varianza
 \DeclareMathOperator{\Var}{Var}
 %%  Traza
 \DeclareMathOperator{\Tr}{tr}
 \DeclareMathOperator{\tr}{tr}
-%%  M^^c3^^a1ximo com^^c3^^ban divisor
+%%  Máximo común divisor
 \DeclareMathOperator{\mcd}{mcd}
-%%  M^^c3^^adnimo com^^c3^^ban m^^c3^^baltiplo
+%%  Mínimo común múltiplo
 \DeclareMathOperator{\mcm}{mcm}
 %%  Divergencia
 \DeclareMathOperator{\dive}{div}
@@ -165,20 +165,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Abreviaciones
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Diferencia de conjuntos peque^^c3^^b1a
+%%  Diferencia de conjuntos pequeña
 \renewcommand{\setminus}{\smallsetminus}
 %%  Contenecia de conjuntos con igual
 \newcommand{\sset}{\subseteq}
-%%  Conjunto vac^^c3^^ado
+%%  Conjunto vacío
 \renewcommand{\emptyset}{\varnothing}
-%%  ^^c3^^89psilon
+%%  Épsilon
 \newcommand{\vepsilon}{\varepsilon}
 %%  Texto ``y'' con espacio
 \newcommand{\texty}{\qquad\text{y}\qquad}
-\newcommand{\yds}{\qquad\text{y}\qquad}
+\newcommand{\yds}{\quad\text{y}\quad}
 %%  Texto ``o'' con espacio
 \newcommand{\texto}{\qquad\text{o}\qquad}
-\newcommand{\ods}{\qquad\text{o}\qquad}
+\newcommand{\ods}{\quad\text{o}\quad}
 %%  Texto ``si y solo si'' con espacio
 \newcommand{\siysolosi}{\quad\text{si y solo si}\quad}
 \newcommand{\ssi}{\quad\text{si y solo si}\quad}
@@ -188,7 +188,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Comandos desplegados
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  L^^c3^^admite en formato desplegado
+%%  Límite en formato desplegado
 \newcommand{\dlim}{\displaystyle\lim}
 \newcommand{\Lim}{\displaystyle\lim}
 %%  Sumatoria en formato desplegado
@@ -200,21 +200,23 @@
 \newcommand{\dint}{\displaystyle\int}
 \newcommand{\Int}{\displaystyle\int}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% --- Abreviaciones de operadores l^^c3^^b3gicos
+%% --- Abreviaciones de operadores lógicos
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Doble implicaci^^c3^^b3n
+%%  Doble implicación
 \newcommand{\Di}{\Longleftrightarrow}
 \newcommand{\dimp}{\Leftrightarrow}
 \newcommand{\Dimp}{\Longleftrightarrow}
-%%  Implicaci^^c3^^b3n
+\newcommand{\qDimp}{\quad\Longleftrightarrow\quad}
+%%  Implicación
 \newcommand{\Imp}{\Longrightarrow}
 \newcommand{\imp}{\Rightarrow}
+\newcommand{\qImp}{\quad\Longrightarrow\quad}
 %%  Conectores con espacio
 \newcommand{\qland}{\quad \land \quad }
 \newcommand{\qlor}{\quad \lor \quad }
 \newcommand{\orm}{\quad \vee \quad }
 \newcommand{\andm}{\quad \wedge \quad }
-%%  Tautolog^^c3^^ada y contradicci^^c3^^b3n
+%%  Tautología y contradicción
 \newcommand{\V}{\mathbb{V}}
 \newcommand{\F}{\mathbb{F}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,7 +254,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Vectores
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Vectores can^^c3^^b3nicos
+%%  Vectores canónicos
 \newcommand{\veci}{\mathbf{i}}
 \newcommand{\vecj}{\mathbf{j}}
 \newcommand{\veck}{\mathbf{k}}
@@ -261,7 +263,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Formato
 \allowdisplaybreaks
-%%  Y ^^c2^^a1se acab^^c3^^b3!
+%%  Y ¡se acabó!
 \endinput
 %%
 %% End of file `aleph-comandos.sty'.
